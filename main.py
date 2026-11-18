@@ -64,8 +64,8 @@ dash_app.layout = html.Div([
         dcc.Slider(id='my-slider', min=0, max=50, step=1, value=8,
                    marks={i: str(i) for i in range(0, 51, 10)}),
         html.Label("Graph Domain:"),
-        dcc.Slider(id='graph-domain-slider', min=20, max=1200, step=10, value=100,
-                   marks={i: str(i) for i in range(20, 1201, 50)}),
+        dcc.Slider(id='graph-domain-slider', min=50, max=1200, step=10, value=150,
+                   marks={i: str(i) for i in range(50, 1201, 50)}),
     ], className='column')
 ], className='row', style={'width': '80%', 'margin': '0 auto'})
 
