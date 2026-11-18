@@ -30,7 +30,7 @@ dash_app.layout = html.Div([
     dcc.Graph(id='live-update-graph'),
     dcc.Interval(
         id='interval-component',
-        interval=5 * 1000,  # 5 秒
+        interval=8 * 1000,  # 8 秒
         n_intervals=0
     ),
     html.Div([
