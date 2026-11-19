@@ -15,7 +15,7 @@ timeframes = ["M5", "M15", "M30", "H1", "H4", "D1", "W1"]
 
 counter = 0
 prevNumBars = 100
-prevTimeFrame = 'M30'
+prevTimeFrame = 'M5'
 
 app = Flask(__name__)
 
@@ -45,7 +45,7 @@ dash_app.layout = html.Div([
         dcc.Dropdown(
             id='timeframe-dropdown',
             options=[{'label': t, 'value': t} for t in timeframes],
-            value='M15',
+            value='M5',
             style={'width': '200px'}
         ),
         html.Label("Number of bars:"),
@@ -61,10 +61,10 @@ dash_app.layout = html.Div([
     html.Div([
         html.Div(id='slider-value-output'),
         html.Label("Threshold:"),
-        dcc.Slider(id='my-slider', min=0, max=50, step=1, value=8,
+        dcc.Slider(id='my-slider', min=0, max=50, step=1, value=6,
                    marks={i: str(i) for i in range(0, 51, 10)}),
         html.Label("Graph Domain:"),
-        dcc.Slider(id='graph-domain-slider', min=50, max=1200, step=10, value=150,
+        dcc.Slider(id='graph-domain-slider', min=50, max=1200, step=10, value=40,
                    marks={i: str(i) for i in range(50, 1201, 50)}),
     ], className='column')
 ], className='row', style={'width': '80%', 'margin': '0 auto'})
